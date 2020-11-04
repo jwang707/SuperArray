@@ -2,9 +2,9 @@ public class SuperArray{
   private String[] data;
   private int size;
 
-  public SuperArray(){
+  public SuperArray(int capacity){
     size = 0;
-    data = new String[10];
+    data = new String[capacity];
   }
 
   public int size(){
@@ -69,5 +69,14 @@ public class SuperArray{
     }
     return false;
   }
+
+
+
+
+
+
+
+
+
 
 }

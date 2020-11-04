@@ -1,6 +1,6 @@
 public class Tester{
   public static void main(String[] args) {
-    SuperArray bam = new SuperArray();
+    SuperArray bam = new SuperArray(50);
     System.out.println(bam.size()); //expecting 0
     bam.add("BANG ENERGY!");
     bam.add("BANG ENERGY!");
@@ -11,13 +11,19 @@ public class Tester{
     System.out.println(bam.toString());
 
 
-    SuperArray words = new SuperArray();
+    SuperArray words = new SuperArray(3);
     words.add("kani");
     words.add("uni");
     words.add("ebi");
     System.out.println(words.toString());
     System.out.println(words.contains("ur mom"));
     System.out.println(words.contains("kani"));
+    System.out.println(words.isEmpty()); //false
+    words.clear();
+    System.out.println(words.isEmpty()); //true
+    System.out.println(words.toString());
+
+
 
   }
 
