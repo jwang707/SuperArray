@@ -8,14 +8,16 @@ public class Tester{
     System.out.println(bam.get(0));// expecting "BANG ENERGY!"
     bam.set(0, "no more bang energy");
     System.out.println(bam.get(0)); //expecting "no more bang energy"
+    System.out.println(bam.toString());
+
 
     SuperArray words = new SuperArray();
     words.add("kani");
     words.add("uni");
     words.add("ebi");
-    for(int i = 0; i < words.size(); i++){
-      System.out.println( words.get(i) );
-    }
+    System.out.println(words.toString());
+    System.out.println(words.contains("ur mom"));
+    System.out.println(words.contains("kani"));
 
   }
 
