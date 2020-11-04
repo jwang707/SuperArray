@@ -7,6 +7,11 @@ public class SuperArray{
     data = new String[capacity];
   }
 
+  public SuperArray(){
+    size = 0;
+    data = new String[10];
+  }
+
   public int size(){
     return size;
   }
@@ -70,11 +75,19 @@ public class SuperArray{
     return false;
   }
 
+  public void add(int index, String element) {
+    String bing = element;
+    if (size + 1 >= data.length) {
+      resize();
+      }
+    for (int i = index; i < size + 1; i++) {
+      String old = data[i];
+      data[i] = bing;
+      bing = old;
+      }
 
-
-
-
-
+      size++;
+  }
 
 
 

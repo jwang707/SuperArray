@@ -16,8 +16,14 @@ public class Tester{
     words.add("uni");
     words.add("ebi");
     System.out.println(words.toString());
+    System.out.println(words.size()); //expecting 1
+
     System.out.println(words.contains("ur mom"));
     System.out.println(words.contains("kani"));
+    words.add(1, "tamago");
+    System.out.println(words.toString());
+    System.out.println(words.size()); //expecting 1
+
     System.out.println(words.isEmpty()); //false
     words.clear();
     System.out.println(words.isEmpty()); //true
