@@ -25,6 +25,8 @@ public class Tester{
     System.out.println(words.size()); //expecting 1
     System.out.println(words.remove(0)); //expecting 1
     System.out.println(words.toString());
+    System.out.println(words.indexOf("kani")); // -1
+    System.out.println(words.indexOf("tamago")); // nont -1
 
 
     System.out.println(words.isEmpty()); //false
