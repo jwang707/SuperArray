@@ -23,6 +23,9 @@ public class Tester{
     words.add(1, "tamago");
     System.out.println(words.toString());
     System.out.println(words.size()); //expecting 1
+    System.out.println(words.remove(0)); //expecting 1
+    System.out.println(words.toString());
+
 
     System.out.println(words.isEmpty()); //false
     words.clear();

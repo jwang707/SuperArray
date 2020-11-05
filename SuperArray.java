@@ -89,6 +89,18 @@ public class SuperArray{
       size++;
   }
 
+  public String remove(int index) {
+    if (index <= size) {
+      String saved = data[index];
+      for (int i = index; i < size-1; i++) {
+        data[i] = data[i+1];
+      }
+      size--;
+      return saved;
+    }
+    else return "";
+  }
+
 
 
 
