@@ -36,7 +36,7 @@ public class SuperArray{
   }
 
   private void resize(){
-    String[] newArray = new String[(data.length + 1)];
+    String[] newArray = new String[(data.length * 2)];
     for (int i = 0; i < data.length; i++){
       newArray[i] = data[i];
     }
@@ -85,12 +85,11 @@ public class SuperArray{
       data[i] = bing;
       bing = old;
       }
-
-      size++;
+    size ++;
   }
 
   public String remove(int index) {
-    if (index <= size) {
+    if (index < size && index >= 0) {
       String saved = data[index];
       for (int i = index; i < size-1; i++) {
         data[i] = data[i+1];
@@ -103,15 +102,23 @@ public class SuperArray{
 
   public int indexOf(String s) {
     int ans = -1;
-    for (int i = 0; i <= size; i++) {
-      if (s.equals(data[i])) {
+    for (int i = 0; i < size; i++) {
+      if (data[i].equals(s)) {
         ans = i;
       }
     }
     return ans;
   }
 
+  public String[] toArray() {
+    String[] ans = new String[size];
+    for (int i = 0; i < size; i++) {
+      ans[i] = data[i];
+    }
 
+    return ans;
+
+  }
 
 
 
