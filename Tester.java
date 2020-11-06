@@ -1,16 +1,7 @@
+import java.util.Arrays;
+
 public class Tester{
   public static void main(String[] args) {
-    SuperArray bam = new SuperArray(50);
-    System.out.println(bam.size()); //expecting 0
-    bam.add("BANG ENERGY!");
-    bam.add("BANG ENERGY!");
-    System.out.println(bam.size()); //expecting 1
-    System.out.println(bam.get(0));// expecting "BANG ENERGY!"
-    bam.set(0, "no more bang energy");
-    System.out.println(bam.get(0)); //expecting "no more bang energy"
-    System.out.println(bam.toString());
-
-
     SuperArray words = new SuperArray(3);
     words.add("kani");
     words.add("uni");
@@ -22,20 +13,17 @@ public class Tester{
     System.out.println(words.contains("kani"));
     words.add(1, "tamago");
     System.out.println(words.toString());
-    System.out.println(words.size()); //expecting 1
-    System.out.println(words.remove(0)); //expecting 1
+    System.out.println(words.size()); // 4
+    words.add("toro");
     System.out.println(words.toString());
-    System.out.println(words.indexOf("kani")); // -1
-    System.out.println(words.indexOf("tamago")); // nont -1
+    System.out.println(words.size());
 
+    System.out.println(words.indexOf("kani")); //0
+    System.out.println(words.remove(0));
+    System.out.println(words.indexOf("kani")); //-1
+    System.out.println(words.indexOf("toro")); // 3
 
-    System.out.println(words.isEmpty()); //false
-    words.clear();
-    System.out.println(words.isEmpty()); //true
-    System.out.println(words.toString());
-
-
-
+    System.out.println(Arrays.toString(words.toArray()));
   }
 
 

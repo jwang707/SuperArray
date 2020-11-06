@@ -101,13 +101,12 @@ public class SuperArray{
   }
 
   public int indexOf(String s) {
-    int ans = -1;
     for (int i = 0; i < size; i++) {
       if (data[i].equals(s)) {
-        ans = i;
+        return i;
       }
     }
-    return ans;
+    return -1;
   }
 
   public String[] toArray() {
@@ -117,24 +116,27 @@ public class SuperArray{
     }
 
     return ans;
-
   }
 
+  public static void removeDuplicates(SuperArray s) {
+    /* for (int i = 0; i < s.size; i++) {
+      for (int j = i+1; j < s.size; j++) {
+      if ((s.data[i]).equals(s.data[j])) {
+        s.remove(i);
+      }
+    }
+  } */
+    System.out.println(s.size);
+    for (int i = s.size-1; i >= 0; i--) {
+      System.out.println(i);
+      System.out.println(s.data[i]);
+      System.out.println(s.indexOf(s.data[i]));
+      if (i != s.indexOf(s.data[i])) {
+        s.remove(i);
+      }
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 }
