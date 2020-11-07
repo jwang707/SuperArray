@@ -118,25 +118,12 @@ public class SuperArray{
     return ans;
   }
 
-  public static void removeDuplicates(SuperArray s) {
-    /* for (int i = 0; i < s.size; i++) {
-      for (int j = i+1; j < s.size; j++) {
-      if ((s.data[i]).equals(s.data[j])) {
-        s.remove(i);
+  public int lastIndexOf(String value){
+    for (int i = size-1; i >= 0; i--) {
+      if (data[i].equals(value)) {
+        return i;
       }
     }
-  } */
-    System.out.println(s.size);
-    for (int i = s.size-1; i >= 0; i--) {
-      System.out.println(i);
-      System.out.println(s.data[i]);
-      System.out.println(s.indexOf(s.data[i]));
-      if (i != s.indexOf(s.data[i])) {
-        s.remove(i);
-      }
-    }
-
-
-}
-
+    return -1;
+  }
 }
